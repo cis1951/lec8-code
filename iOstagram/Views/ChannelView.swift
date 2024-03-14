@@ -20,12 +20,15 @@ struct ChannelView: View {
         VStack {
             ScrollView {
                 VStack {
-                    ForEach(channel.posts) { post in
+                    ForEach(channel.posts.sorted(by: { $0.createdAt > $1.createdAt })) { post in
                         PostView(post: post)
                     }
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
+            }
+            .refreshable {
+                await chatViewModel.refreshPosts(channelId: channelId)
             }
             
             HStack {

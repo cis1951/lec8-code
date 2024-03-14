@@ -29,6 +29,9 @@ struct ContentView: View {
                         }
                     )
                 }
+                .refreshable {
+                    await chatViewModel.refreshChannels()
+                }
             }
             .navigationTitle("Channels")
             .toolbar {
