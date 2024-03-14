@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Channel: Identifiable, Hashable, Decodable {
+struct Channel { // TODO: Add conformances
     let channelId: UUID
     let name: String
     var posts: [Post]
@@ -40,7 +40,7 @@ struct Channel: Identifiable, Hashable, Decodable {
     }
 }
 
-struct Post: Identifiable, Hashable, Codable {
+struct Post { // TODO: Add conformances
     let id: UUID
     let author: String
     let content: String
