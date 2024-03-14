@@ -1,0 +1,19 @@
+{
+    "name": "discord-at-penn-backend",
+    "version": "1.0.0",
+    "description": "Backend for CIS1951 Discord@Penn demo",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongodb": "^3.6.0",
+        "uuid": "^9.0.1",
+        "ws": "^8.16.0"
+    },
+    "author": "JHawk0224",
+    "license": "ISC"
+}
