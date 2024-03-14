@@ -19,11 +19,13 @@ struct ChannelView: View {
     var body: some View {
         VStack {
             ScrollView {
-                VStack(alignment: .leading) {
+                VStack {
                     ForEach(channel.posts) { post in
                         PostView(post: post)
                     }
                 }
+                .frame(maxWidth: .infinity)
+                .padding()
             }
             
             HStack {
@@ -40,7 +42,6 @@ struct ChannelView: View {
             }
             .padding()
         }
-        .padding()
         .navigationTitle(channel.name)
         .navigationBarTitleDisplayMode(.inline)
     }
