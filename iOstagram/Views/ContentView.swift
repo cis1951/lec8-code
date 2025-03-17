@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var chatViewModel = ChatViewModel()
+    @State var chatViewModel = ChatViewModel()
     
     @State var selectedChannel: Channel?
     @State var shouldSetName = true

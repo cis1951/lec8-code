@@ -7,9 +7,9 @@
 
 import Foundation
 
-@MainActor class ChatViewModel: ObservableObject {
-    @Published var channels: [UUID: Channel] = [:]
-    @Published var username: String = ""
+@MainActor @Observable class ChatViewModel {
+    var channels: [UUID: Channel] = [:]
+    var username: String = ""
     
     // TODO: Complete this
 }

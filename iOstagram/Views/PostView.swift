@@ -11,7 +11,7 @@ struct PostView: View {
     let post: Post
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(post.content)
             Text(post.author)
                 .font(.subheadline)
@@ -22,6 +22,7 @@ struct PostView: View {
                 .italic()
         }
         .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 14)
             .foregroundStyle(.cyan)
         )

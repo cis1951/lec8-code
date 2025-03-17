@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChannelView: View {
     let channelId: UUID
-    @ObservedObject var chatViewModel: ChatViewModel
+    var chatViewModel: ChatViewModel
     var channel: Channel {
         chatViewModel.channels[channelId] ?? Channel.mock
     }
