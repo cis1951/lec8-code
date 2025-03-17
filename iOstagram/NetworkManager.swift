@@ -15,7 +15,7 @@ enum NetworkError: String, Error {
 class NetworkManager {
     static let instance = NetworkManager()
     
-    let baseUrl = "http://localhost:3000"
+    let baseUrl = "https://cis1951-lec8-backend-99a1ab6d6844.herokuapp.com"
     
     func getChannels() async throws -> [Channel] {
         // TODO: Complete
