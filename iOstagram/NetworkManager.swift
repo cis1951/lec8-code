@@ -16,6 +16,8 @@ class NetworkManager {
     static let instance = NetworkManager()
     
     let baseUrl = "https://cis1951-lec8-backend-99a1ab6d6844.herokuapp.com"
+    // Use this instead if running backend locally
+    // let baseUrl = "http://localhost:3000"
     
     func getChannels() async throws -> [Channel] {
         // TODO: Complete
