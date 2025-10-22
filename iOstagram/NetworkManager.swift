@@ -15,7 +15,9 @@ enum NetworkError: String, Error {
 class NetworkManager {
     static let instance = NetworkManager()
     
-    let baseUrl = "http://localhost:3000"
+    // Use this instead if running backend locally
+    // let baseUrl = "http://localhost:3000"
+    let baseUrl = "http://ec2-18-212-234-98.compute-1.amazonaws.com"
     
     func getChannels() async throws -> [Channel] {
         guard let url = URL(string: "\(baseUrl)/channels") else {
